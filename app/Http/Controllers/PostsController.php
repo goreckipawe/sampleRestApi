@@ -8,9 +8,9 @@ class PostsController extends Controller
 {
     private $postsService;
 
-    public function __construct()
+    public function __construct(PostsService $postsService)
     {
-        $this->postsService = new PostsService();
+        $this->postsService = $postsService;
     }
 
     public function getPost(int $postId)
